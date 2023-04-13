@@ -1,0 +1,20 @@
+  pragma solidity ^0.8.0;
+
+contract _Practise {
+    function setArray(uint256 [] memory array) public {
+        myArray =array;
+    }
+    
+ uint256 [] public myArray;
+    function arrayToMap() public view returns (mapping(uint256 => bool) memory) {
+        mapping(uint256 => bool) memory myMap;
+        for (uint256 i = 0; i < myArray.length; i++) {
+            myMap[myArray[i]] = true;
+        }
+        return myMap;
+    }
+    function getArray() public view returns (uint256[] memory) {
+        return myArray;
+    }
+
+}
