@@ -1,0 +1,18 @@
+pragma solidity ^0.8.0;
+
+contract MyContract {
+
+    mapping(uint => string) myMap;
+    function   setMap(uint _a,string memory _s) public {
+     myMap[_a]= _s;}
+    function iterateMap() public view returns (string[] memory) {
+        string[] memory values = new string[](4);
+        
+        for (uint i = 0; i < 4;i++) {
+            values[i] = myMap[i];
+        }
+        
+        return values;
+    }
+}
+
